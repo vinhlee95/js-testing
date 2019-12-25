@@ -9,3 +9,10 @@ const myFunction = () => {
 }
 
 myFunction()
+
+// Check types
+const sayHello = (name: string) => {
+	console.log(`Hello ${name}`)
+}
+
+sayHello('1') // TypeScript should complain about this
