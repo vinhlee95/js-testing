@@ -6,12 +6,8 @@
 			"jsx": true
 		}
 	},
-	"rules": {
-		"valid-typeof": "error",
-		"no-unused-vars": "warn",
-		"no-undef": "warn",
-		"no-console": "warn"
-	},
+	"extends": ["eslint:recommended"], // use eslint recommended configs
+	"rules": {}, // override extended configs
 	"env": {
 		"browser": true
 	}
