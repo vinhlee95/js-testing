@@ -1,3 +1,3 @@
-const string = 'abc'
+const string = "abc";
 // typeof string === 'strng' eslint should complain about this
-typeof string === 'string'
+typeof string === "string";
