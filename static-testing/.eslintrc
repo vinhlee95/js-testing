@@ -6,7 +6,7 @@
 			"jsx": true
 		}
 	},
-	"extends": ["eslint:recommended"], // use eslint recommended configs
+	"extends": ["eslint:recommended", "eslint-config-prettier"], // use eslint recommended configs
 	"rules": {
 		"strict": ["error", "never"]
 	}, // override extended configs
