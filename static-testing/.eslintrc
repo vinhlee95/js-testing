@@ -7,7 +7,9 @@
 		}
 	},
 	"extends": ["eslint:recommended"], // use eslint recommended configs
-	"rules": {}, // override extended configs
+	"rules": {
+		"strict": ["error", "never"]
+	}, // override extended configs
 	"env": {
 		"browser": true
 	}
