@@ -10,7 +10,7 @@
 		"format": "yarn prettier --write",
 		"check-format": "yarn prettier --list-different",
 		"check-types": "tsc",
-		"validate": "yarn check-types && yarn check-format && yarn lint && yarn build"
+		"validate": "yarn check-types && yarn check-format && yarn lint"
 	},
 	"author": "Vinh Le <lethanhvinh95@gmail.com>",
 	"license": "ISC",
