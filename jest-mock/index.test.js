@@ -1,7 +1,8 @@
 const utils = require('./utils')
 const math = require('./index')
 
-utils.add = jest.fn((a,b) => a+b)
+jest.spyOn(utils, 'add')
+utils.add.mockImplementation((a,b) => a+b)
 
 test('do math add', () => {
 	const sum = math.doAdd(1,2)
@@ -11,6 +12,7 @@ test('do math add', () => {
 	expect(utils.add).toHaveBeenCalledWith(1,2)
 	expect(utils.add).toHaveBeenCalledTimes(2)
 	expect(utils.add).toHaveBeenNthCalledWith(1, 1, 2)
+	expect(utils.add).toHaveBeenNthCalledWith(2, 3, 4)
 	expect(utils.add).toHaveBeenNthCalledWith(2, 3, 4)
 
 	// clean up
