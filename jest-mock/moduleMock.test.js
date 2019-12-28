@@ -2,9 +2,7 @@ const utils = require('./utils')
 const math = require('./index')
 
 // Jest module mocking
-jest.mock('./utils', () => ({
-	add: jest.fn((a, b) => a + b)
-}))
+jest.mock('./utils')
 
 test('do correct math with module mocking', () => {
 	const sum = math.doAdd(1,2)
