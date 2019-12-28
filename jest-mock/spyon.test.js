@@ -1,10 +1,11 @@
 const utils = require('./utils')
 const math = require('./index')
 
+// Jest spyOn
 jest.spyOn(utils, 'add')
 utils.add.mockImplementation((a,b) => a+b)
 
-test('do math add', () => {
+test('do correct math with jest spyOn', () => {
 	const sum = math.doAdd(1,2)
 	math.doAdd(3,4)
 
@@ -13,9 +14,7 @@ test('do math add', () => {
 	expect(utils.add).toHaveBeenCalledTimes(2)
 	expect(utils.add).toHaveBeenNthCalledWith(1, 1, 2)
 	expect(utils.add).toHaveBeenNthCalledWith(2, 3, 4)
-	expect(utils.add).toHaveBeenNthCalledWith(2, 3, 4)
 
 	// clean up
 	utils.add.mockRestore()
 })
-
